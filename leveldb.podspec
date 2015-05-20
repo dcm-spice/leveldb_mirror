@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "ssh://git@git.drecom.jp:10022/askeloef_peter/drecom-leveldb.git", :tag => "v#{s.version}", :submodules => true }
   s.source_files  = ["leveldb/db/*.cc", "leveldb/port/*.cc", "leveldb/table/*.cc", "leveldb/util/*.cc", "leveldb/include/leveldb/*.h"]
-  s.exclude_files = ["leveldb/**/*_text.cc", "leveldb/port/win"]
+  s.exclude_files = ["leveldb/**/*_test.cc", "leveldb/port/win"]
   s.public_header_files = "leveldb/include/leveldb/*.h"
   s.preserve_paths = ["leveldb/db", "leveldb/helpers", "leveldb/port", "leveldb/table", "leveldb/util", "Android.mk"]
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/leveldb/leveldb" }
