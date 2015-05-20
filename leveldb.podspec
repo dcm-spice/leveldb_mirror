@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "drecom-leveldb"
+  s.name         = "leveldb"
   s.version      = "1.18"
   s.summary      = "LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values."
   s.description  = <<-DESC
@@ -13,7 +13,6 @@ Pod::Spec.new do |s|
   s.source_files  = ["leveldb/db/*.cc", "leveldb/port/*.cc", "leveldb/table/*.cc", "leveldb/util/*.cc", "leveldb/include/leveldb/*.h"]
   s.exclude_files = ["leveldb/**/*_text.cc", "leveldb/port/win"]
   s.public_header_files = "leveldb/include/leveldb/*.h"
-  s.header_dir   = "leveldb"
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/leveldb/leveldb" }
   s.compiler_flags = ["-DOS_MACOSX", "-DLEVELDB_PLATFORM_POSIX"]
 end
