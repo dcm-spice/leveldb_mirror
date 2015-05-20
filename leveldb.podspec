@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   s.source_files  = ["leveldb/db/*.cc", "leveldb/port/*.cc", "leveldb/table/*.cc", "leveldb/util/*.cc", "leveldb/include/leveldb/*.h"]
   s.exclude_files = ["leveldb/**/*_text.cc", "leveldb/port/win"]
   s.public_header_files = "leveldb/include/leveldb/*.h"
+  s.preserve_paths = ["leveldb/db", "leveldb/port", "leveldb/table", "leveldb/util"]
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/leveldb/leveldb" }
   s.compiler_flags = ["-DOS_MACOSX", "-DLEVELDB_PLATFORM_POSIX"]
 end
