@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT (example)"
   s.author       = { "Google" => "email@address.com" }
 
-  s.source       = { :git => "http://git.drecom.jp/askeloef_peter/drecom-leveldb", :tag => "v#{s.version}" }
+  s.source       = { :git => "http://git.drecom.jp/askeloef_peter/drecom-leveldb", :tag => "v#{s.version}", :submodules => true }
   s.source_files  = ["leveldb/db/*.cc", "leveldb/port/*.cc", "leveldb/table/*.cc", "leveldb/util/*.cc", "leveldb/include/leveldb/*.h"]
   s.exclude_files = ["leveldb/**/*_text.cc", "leveldb/port/win"]
   s.public_header_files = "leveldb/include/leveldb/*.h"
