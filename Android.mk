@@ -2,7 +2,7 @@ LOCAL_PATH := $(call my-dir)/leveldb
 
 include $(CLEAR_VARS)
 LOCAL_MODULE_FILENAME := libleveldb
-LOCAL_MODULE := leveldb_static
+LOCAL_MODULE := leveldb_mirror_static
 LOCAL_CFLAGS := -O3 -fno-builtin-memcmp -D_REENTRANT -DOS_ANDROID -DLEVELDB_PLATFORM_POSIX -DNDEBUG
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_C_INCLUDES := $(LOCAL_PATH) \
