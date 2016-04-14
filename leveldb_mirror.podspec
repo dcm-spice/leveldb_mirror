@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license      = "New BSD License"
   s.author       = { "Google" => "email@address.com" }
   s.source       = {
-    :git => "https://github.com/dcm-spice/leveldb.git",
+    :git => "https://github.com/dcm-spice/leveldb_mirror.git",
     :tag => "v#{s.version}",
     :submodules => true
   }
