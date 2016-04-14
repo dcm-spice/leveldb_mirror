@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
                else
                  "$(PODS_ROOT)/#{s.name}"
                end
-  s.pod_target_xcconfig = { "HEADER_SEARCH_PATHS" => File.join(local_path, "leveldb") }
+  s.pod_target_xcconfig = { "HEADER_SEARCH_PATHS" => "#{local_path}/leveldb" }
   s.platforms = { :ios => "6.0", :osx => "10.7" }
   s.compiler_flags = "-DOS_MACOSX", "-DLEVELDB_PLATFORM_POSIX"
 end
