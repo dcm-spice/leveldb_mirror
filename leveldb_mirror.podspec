@@ -33,7 +33,8 @@ Pod::Spec.new do |s|
                else
                  "$(PODS_ROOT)/#{s.name}"
                end
-  s.pod_target_xcconfig = { "HEADER_SEARCH_PATHS" => "#{local_path}/leveldb" }
+  s.pod_target_xcconfig = { "HEADER_SEARCH_PATHS" => "#{local_path}/leveldb",
+                            "WARNING_CFLAGS" => "-Wno-shorten-64-to-32 -Wno-comma -Wno-unreachable-code -Wno-conditional-uninitialized -Wno-deprecated-declarations" }
   s.platforms = { :ios => "6.0", :osx => "10.7" }
   s.compiler_flags = "-DOS_MACOSX", "-DLEVELDB_PLATFORM_POSIX"
 end
