@@ -3,7 +3,7 @@ LOCAL_PATH := $(call my-dir)/leveldb
 include $(CLEAR_VARS)
 LOCAL_MODULE_FILENAME := libleveldb
 LOCAL_MODULE := leveldb_mirror_static
-LOCAL_CFLAGS := -O3 -fno-builtin-memcmp -D_REENTRANT -DOS_ANDROID -DLEVELDB_PLATFORM_POSIX -DNDEBUG
+LOCAL_CFLAGS := -O3 -D_REENTRANT -DOS_ANDROID -DLEVELDB_PLATFORM_POSIX -DNDEBUG
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_C_INCLUDES := $(LOCAL_PATH) \
                     $(LOCAL_PATH)/include \
@@ -13,6 +13,7 @@ LOCAL_SRC_FILES := db/builder.cc \
                    db/db_impl.cc \
                    db/db_iter.cc \
                    db/dbformat.cc \
+                   db/dumpfile.cc \
                    db/filename.cc \
                    db/log_reader.cc \
                    db/log_writer.cc \
@@ -46,6 +47,7 @@ LOCAL_SRC_FILES := db/builder.cc \
                    util/options.cc \
                    util/status.cc \
                    port/port_posix.cc \
+                   port/port_posix_sse.cc \
                    helpers/memenv/memenv.cc \
 
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/include
